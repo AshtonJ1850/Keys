@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Reliable Dumpster Rental Services in North Carolina">
+  <link rel="stylesheet" href="styles.css">
+  <title>Prime Dumpsters</title>
+</head>
+<body>
+  <header class="main-header">
+    <div class="container">
+        <h1 class="logo">Prime Dumpsters</h1>
+
+        <div class="head img">
+          <img src="images/logo.jpg" alt="Prime Dumpsters Logo" class="header-logo">
+          </div>
+
+        <nav>
+            <div class="navbar-toggler" onclick="toggleNavbar()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+            <div class="nav-links">
+                <a href="#services">Services</a>
+                <a href="#about">About Us</a>
+                <a href="#ServiceArea">Service Area</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </div>
+    <script>
+      function toggleNavbar() {
+          const navLinks = document.querySelector('.nav-links');
+          navLinks.classList.toggle('active');
+      }
+  </script>
+</header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Your Reliable Partner in Dumpster Rentals</h2>
+      <p>Providing affordable, dependable, and hassle-free dumpster rental solutions throughout North Carolina.</p>
+      <a href="#contact" class="btn">Get a Quote</a>
+    </div>
+  </section>
+
+  <section id="services" class="services">
+    <div class="container">
+      <h3>Our Services</h3>
+      <div class="service-item">
+        <p>Our roll-off dumpster and dump trailer services provide reliable, versatile waste management solutions tailored to your needs. Whether you're tackling a home renovation, clearing out a construction site, or managing debris from a large-scale project, our roll-off dumpsters and dump trailers are designed for convenience and efficiency. With flexible rental options, prompt delivery and pickup, and exceptional customer service, we ensure your cleanup process is hassle-free. Trust us to handle your waste disposal with professionalism and reliability.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="about">
+    <div class="container">
+      <h3>About Us</h3>
+      <p>At Prime Dumpsters, we are committed to making waste management simple, efficient, and hassle-free. As a trusted provider of roll-off dumpsters and dump trailers, we serve homeowners, businesses, and construction professionals with reliable solutions for projects of all sizes. With a focus on exceptional customer service, timely delivery, and eco-friendly practices, we strive to exceed expectations at every step. Our mission is to provide clean, convenient, and affordable waste disposal options that help our clients focus on what matters most—getting the job done. Let us partner with you to keep your projects running smoothly and your spaces clutter-free.</p>
+    </div>
+  </section>
+
+  <section id="service-area" class="service-area">
+    <div class="container">
+      <h3>Our Service Area</h3>
+      <p>We proudly serve the following areas across North Carolina. Wherever you need dumpster rental services, we are here to help!</p>
+      
+      <!-- List or map of service areas -->
+      <ul>
+        <li>Dunn</li>
+        <li>Erwin</li>
+        <li>Fayetteville</li>
+        <li>Clinton</li>
+        <li>Fouroaks</li>
+        <li>Fuquay-Varina</li>
+        <li>... and more!</li>
+      </ul>
+  
+      <h4>Find Us on the Map</h4>
+      <!-- Google Map Embed -->
+      <div class="google-map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d986708.8192381152!2d-78.79204089999999!3d35.471736!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xaf2fdb3fffec600b%3A0x33a8251d4ce3c8c6!2sPrime%20Dumpsters!5e1!3m2!1sen!2sus!4v1734309341561!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery" class="gallery">
+    <div class="container">
+      <h3>Gallery</h3>
+      <div class="slideshow-container">
+        <div class="slide">
+          <img src="images/2.jpg" alt="Gallery Image 2" style="width:100%">
+        </div>
+        <div class="slide">
+          <img src="images/3.jpg" alt="Gallery Image 3" style="width:100%">
+        </div>
+        <div class="slide">
+          <img src="images/4.jpg" alt="Gallery Image 4" style="width:100%">
+        </div>
+        <div class="slide">
+          <img src="images/5.jpg" alt="Gallery Image 4" style="width:100%">
+        </div>
+        <div class="slide">
+          <img src="images/6.jpg" alt="Gallery Image 5" style="width:100%">
+        </div>
+  
+        <!-- Navigation Buttons -->
+        <a class="prev" onclick="changeSlide(-1)">&#10094;</a>
+        <a class="next" onclick="changeSlide(1)">&#10095;</a>
+      </div>
+  
+      <!-- Dots for Slide Navigation -->
+      <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <div class="container">
+      <h3>Contact Us</h3>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+  <section id="social" class="social">
+    <div class="container">
+      <h3>Follow Us</h3>
+      <div class="social-icons">
+        <a href="https://www.instagram.com/primedumpsters?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">
+          <img src="images/instalogo.jpg" alt="Instagram" class="social-icon">
+        </a>
+        <a href="https://www.facebook.com/profile.php?id=100086480035722" target="_blank">
+          <img src="images/facebooklogo.png" alt="Facebook" class="social-icon">
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2024 Prime Dumpsters. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Include EmailJS Library -->
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    // Initialize EmailJS
+    (function() {
+      emailjs.init('XoCEF_gbbXvtik-dw'); // Replace with your actual public key
+    })();
+
+    // Handle form submission
+    document.getElementById('contactForm').addEventListener('submit', function(event) {
+      event.preventDefault(); // Prevent default form submission
+
+      // Use EmailJS to send form data
+      emailjs.sendForm('service_cbb036m', 'template_nhmi725', this) // Replace with your Service ID and Template ID
+        .then(() => {
+          alert('Message sent successfully!');
+          document.getElementById('contactForm').reset(); // Reset the form
+        })
+        .catch((error) => {
+          alert('Failed to send message. Please try again.');
+          console.error('Error:', error);
+        });
+    });
+  </script>
+  <script>
+    // Initialize slide index
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    // Function to navigate to the previous or next slide
+    function changeSlide(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    // Function to navigate directly to a specific slide
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    // Function to display the current slide
+    function showSlides(n) {
+      let slides = document.getElementsByClassName("slide");
+      let dots = document.getElementsByClassName("dot");
+    
+      // Loop through slides and hide them
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      
+      // Hide all slides
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      
+      // Reset all dots
+      for (let i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      
+      // Show the current slide and highlight the active dot
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+    
+    // Automatic slideshow function (optional)
+    function autoShowSlides() {
+      setInterval(function() {
+        changeSlide(1);
+      }, 5000); // Change slide every 5 seconds
+    }
+    
+    // Call autoShowSlides function (optional)
+    autoShowSlides();
+    </script>
+</body>
+</html>

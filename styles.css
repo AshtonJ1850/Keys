@@ -1,0 +1,349 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #000000;
+  color: #ffffff;
+  padding-top: 4rem;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Header and Navigation Bar */
+header {
+  background: #000000;
+  color: #ffffff;
+  padding: 1rem 0;
+  position: fixed; /* Make the header fixed at the top */
+  top: 0; /* Position at the top of the screen */
+  left: 0; /* Align with the left side */
+  width: 100%; /* Make it span the full width of the page */
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+/* Navbar links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+}
+
+/* Navbar toggler for smaller screens */
+.navbar-toggler {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 25px;
+  height: 21px;
+  cursor: pointer;
+}
+
+.navbar-toggler div {
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+/* Responsive layout for smaller screens */
+@media (max-width: 768px) {
+  .nav-links {
+      display: none;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      right: 0;
+      background-color: #333;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 1rem;
+  }
+
+  .nav-links.active {
+      display: flex;
+  }
+
+  .navbar-toggler {
+      display: flex;
+  }
+}
+
+/* Hero Section */
+.hero {
+  background: url('images/IMG_3880.jpg') no-repeat center center/cover;
+  color: #ffffff;
+  padding: 5rem 0;
+  text-align: center;
+  position: relative; /* Positioning context for the overlay */
+}
+
+/* Adding the overlay */
+.hero::before {
+  content: ''; /* Empty content for the overlay */
+  position: absolute; /* Position it on top of the background image */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* Darkens the background with a black semi-transparent overlay */
+  z-index: 1; /* Ensure the overlay is on top of the background image but below the text */
+}
+
+/* Ensure the text stays on top of the overlay */
+.hero h2, .hero p, .hero .btn {
+  position: relative; /* Make sure the text is above the overlay */
+  z-index: 2; /* Ensure the text appears above the overlay */
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.hero .btn {
+  background: #ff0000;
+  color: #000000;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+/* Services, About, and Contact Sections */
+.services, .about, .contact {
+  padding: 2rem 0;
+  background: #000000;
+  margin-bottom: 1rem;
+
+}
+
+.service-item {
+  margin-bottom: 1rem;
+}
+
+.contact form {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact label {
+  margin-bottom: 0.5rem;
+}
+
+.contact input, .contact textarea, .contact button {
+  margin-bottom: 1rem;
+  padding: 0.5rem;
+}
+
+/* Footer */
+.footer {
+  text-align: center;
+  padding: 1rem 0;
+  background: #030000;
+  color: #fff;
+}
+
+/* Gallery Section */
+.gallery {
+  padding: 4rem 0;
+  background: #000000;
+  text-align: center;
+}
+
+.gallery h3 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+/* Slideshow Container */
+.slideshow-container {
+  position: relative;
+  max-width: 100%;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* Individual Slides */
+.slide {
+  display: none;
+  width: 100%;
+  height: auto;
+}
+
+.slide img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Ensures the images fill the slide area */
+  border-radius: 10px;
+}
+
+/* Navigation Buttons for Slideshow */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Fine-tune centering */
+  width: auto;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 3px;
+  user-select: none;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.prev {
+  left: 0; /* Position the left button at the left edge */
+  border-radius: 3px 0 0 3px;
+}
+
+.next {
+  right: 0; /* Position the right button at the right edge */
+  border-radius: 0 3px 3px 0;
+}
+
+/* Dots for Slide Navigation */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.dot.active {
+  background-color: #ff0000; /* Highlight active dot with a red color */
+}
+
+.dot:hover {
+  background-color: #717171; /* Slight hover effect */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .slide img {
+      width: 100%;
+      height: auto;
+  }
+
+  /* Adjust navigation button sizes on mobile */
+  .prev, .next {
+      font-size: 14px;
+      padding: 12px;
+  }
+}
+
+/* Ensure the container takes full width */
+.head.img {
+  display: flex;            /* Enables flexbox */
+  justify-content: center;  /* Centers content horizontally */
+  align-items: center;      /* Centers content vertically */
+  height: 100%;             /* Ensures the div takes the height of the parent container */
+}
+
+.header-logo {
+  max-width: 80px;          /* Prevents the image from exceeding the container width */
+  height: auto;             /* Maintains the aspect ratio of the image */
+  margin-left: 275px;
+}
+
+.social {
+  text-align: center;
+  padding: 40px 0;
+  background-color: #000000; /* Optional: Add a background color */
+}
+
+.social h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 20px; /* Adjust the gap between icons */
+}
+
+.social-icon {
+  width: 80px; /* Adjust the size of the icons */
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.social-icon:hover {
+  transform: scale(1.1); /* Optional: Add hover effect */
+}
+
+
+.service-area {
+  padding: 40px 0;
+  background-color: #000000; /* Light background color */
+  text-align: center;
+}
+
+.service-area h3 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.service-area p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.service-area ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.service-area ul li {
+  font-size: 1.1rem;
+  margin: 5px 0;
+}
+
+.google-map iframe {
+  border: none;
+  width: 100%;
+  max-width: 600px; /* Adjust width */
+  height: 450px;
+  margin-top: 20px;
+}
